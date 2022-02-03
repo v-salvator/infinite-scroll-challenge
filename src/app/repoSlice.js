@@ -13,7 +13,7 @@ const fetchRepoBySearchText = createAsyncThunk(
       const response = await octokit.request("GET /search/repositories", {
         q: queryString,
         per_page: sizePerPage,
-        page: refresh ? 0 : currentPage,
+        page: refresh ? 1 : currentPage,
       });
       return response.data;
     } catch (err) {
@@ -28,7 +28,7 @@ export const repoSlice = createSlice({
     repos: [],
     totalCount: 0,
     currentPage: 1,
-    sizePerPage: 10,
+    sizePerPage: 30, // 10,
     isLoading: false,
     isLastPage: false,
   },
