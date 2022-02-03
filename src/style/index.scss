@@ -1,0 +1,8 @@
+body {
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+@import "./components/index.scss";
+@import "./App.scss";

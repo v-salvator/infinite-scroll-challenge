@@ -1,0 +1,13 @@
+.app {
+  text-align: center;
+  height: 100vh;
+  overflow: scroll;
+
+  &__search-container {
+    // border: 1px solid red;
+    & > input {
+      height: 26px;
+      margin: 8px;
+    }
+  }
+}
